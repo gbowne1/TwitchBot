@@ -1,0 +1,3 @@
+[submodule "chatbot"]
+	path = TwitchBot
+	url = git@github.com:gbowne1/TwitchBot/TwitchBot.git

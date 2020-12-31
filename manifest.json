@@ -1,0 +1,19 @@
+{
+	"background": {
+		"persistent": true,
+		"scripts": [ "background.js" ]
+	},
+	"browser_action":{
+		"default_icon": {
+			"16": "icon/icon16.png",
+			"48": "icon/icon48.png",
+			"128": "icon/icon128.png"
+		}
+	},
+	"name": "Twitch Farmer",
+	"description": "Automatically claims Twitch Channel Points.",
+	"permissions": [ "*://*.twitch.tv/*", "tabs", "storage" ],
+	"web_accessible_resources": [ "injected.js" ],
+	"manifest_version": 2,
+	"version": "0.0.1"
+}

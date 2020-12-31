@@ -1,0 +1,88 @@
+version: '2'
+
+services:
+  bot:
+    image: ghcr.io/mzrimsek/bastulos-bot:latest
+    container_name: bastulos_bot
+    environment:
+      - TWITCH_CHANNEL_1=bastulos
+      - OBS_URL=${OBS_URL}
+      - OBS_PASSWORD=${OBS_PASSWORD}
+      - TMI_TOKEN=${TMI_TOKEN}
+      - FIREBASE_PROJECT_ID=${FIREBASE_PROJECT_ID}
+      - FIREBASE_PRIVATE_KEY_ID=${FIREBASE_PRIVATE_KEY_ID}
+      - FIREBASE_PRIVATE_KEY=${FIREBASE_PRIVATE_KEY}
+      - FIREBASE_CLIENT_EMAIL=${FIREBASE_CLIENT_EMAIL}
+      - FIREBASE_CLIENT_ID=${FIREBASE_CLIENT_ID}
+      - FIREBASE_CLIENT_CERT_URL=${FIREBASE_CLIENT_CERT_URL}
+      - FIREBASE_DATABASE_URL=${FIREBASE_DATABASE_URL}
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - DISCORD_BOT_USER_ID=${DISCORD_BOT_USER_ID}
+    restart: unless-stopped
+
+    version: "3.4"
+
+services:
+    chatbot:
+        build:
+            context: .
+            dockerfile: ./docker/chatbot/Dockerfile
+        volumes:
+            - ./chatbot:/usr/svr/chatbot
+            - dev-certs:/certs:ro,nocopy
+        depends_on:
+            - mercure
+        environment:
+            - APP_ENV=dev
+
+        env_file:
+            - ./chatbot/.env
+        restart: on-failure
+
+
+    mercure:
+        image: dunglas/mercure
+        environment:
+            - ALLOW_ANONYMOUS=1
+            - CERT_FILE=/certs/localhost.crt
+            - CORS_ALLOWED_ORIGINS=*
+            - DEMO=1
+            - JWT_KEY=!ChangeMe!
+            - KEY_FILE=/certs/localhost.key
+            - PUBLISH_ALLOWED_ORIGINS=https://localhost:1337 # required for publishing from the demo page
+        depends_on:
+            - dev-tls
+        volumes:
+            - dev-certs:/certs:ro,nocopy
+        ports:
+            -   target: 443
+                published: 1337
+                protocol: tcp
+
+    dev-tls:
+        build:
+            context: ./docker/dev-tls
+        volumes:
+            - dev-certs:/certs:rw
+        ports:
+            -   target: 80
+                published: 80
+                protocol: tcp
+
+    client:
+        build:
+            context: .
+            dockerfile: ./docker/client/Dockerfile
+        depends_on:
+            - dev-tls
+        volumes:
+            - ./client:/usr/srv/client
+            - ./client/config/development.js:/usr/srv/client/src/config.js:ro
+        env_file:
+            - ./chatbot/.env
+        ports:
+            -   target: 80
+                published: 8081
+                protocol: tcp
+volumes:
+    dev-certs: {}
