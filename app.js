@@ -1,21 +1,15 @@
 const axios = require('axios');
-const chalk = require('chalk');
 const express = require('express');
 const _ = require('lodash');
-const fetch = require('node-fetch');
-const uuid = require('uuid');
-const socketIO = require('socket.io');
-const dotenv = require('dotenv');
+const fetch = require( 'node-fetch');
+const uuid = require( 'uuid');
+const socketIO = require( 'socket.io');
+const dotenv = require( 'dotenv');
 const tmi = require('tmi.js');
 
 dotenv.config();
 
 const app = express();
-const server = app.listen(3000, () => {
-	console.log(chalk.green('Server listening on port 3000'));
-});
-
-const io = socketIO(server);
 
 const uptimeCommand = require('./commands/uptime');
 const projectCommand = require('./commands/project');

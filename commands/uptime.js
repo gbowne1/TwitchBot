@@ -1,4 +1,4 @@
-/ commands/uptime.js
+// commands/uptime.js
 const axios = require('axios');
 
 module.exports = async function uptime(twitchClient, channel) {
