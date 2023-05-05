@@ -1,15 +1,10 @@
-const axios = require('axios');
-const express = require('express');
 const _ = require('lodash');
-const fetch = require( 'node-fetch');
 const uuid = require( 'uuid');
 const socketIO = require( 'socket.io');
 const dotenv = require( 'dotenv');
 const tmi = require('tmi.js');
 
 dotenv.config();
-
-const app = express();
 
 const uptimeCommand = require('./commands/uptime');
 const projectCommand = require('./commands/project');

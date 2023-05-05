@@ -1,0 +1,27 @@
+{
+	"name": "twitchbot-client",
+	"version": "1.0.0",
+	"description": "the twitchbot client",
+	"main": "index.js",
+	"scripts": {
+		"test": "npm run test"
+	},
+	"keywords": [
+		"twitch",
+		"bot",
+		"client"
+	],
+	"author": "Greg Bowne",
+	"license": "MIT",
+	"dependencies": {
+		"axios": "^1.4.0",
+		"chai": "^4.3.7",
+		"chalk": "^5.2.0",
+		"cheerio": "^1.0.0-rc.12",
+		"discord.js": "^14.10.2",
+		"ejs": "^3.1.9",
+		"handlebars": "^4.7.7",
+		"node-fetch": "^3.3.1",
+		"socket.io-client": "^4.6.1"
+	}
+}
