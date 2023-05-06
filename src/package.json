@@ -4,7 +4,10 @@
 	"description": "the twitchbot client",
 	"main": "index.js",
 	"scripts": {
-		"test": "npm run test"
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
 	},
 	"keywords": [
 		"twitch",
