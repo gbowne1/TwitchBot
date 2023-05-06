@@ -14,7 +14,6 @@ const mongodb = require('mongodb');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const multer = require('multer');
-const fetch = require('node-fetch');
 const passport = require('passport');
 const session = require('express-session');
 const prettier = require('prettier');
