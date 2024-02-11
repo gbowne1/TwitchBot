@@ -1,6 +1,6 @@
 # newtwitchbot
 
-This is a Twitch Chat bot.  
+This is a Twitch Chat bot that has a React and MUI/MaterialUI front end and NodeJS backend with MongoDB database
 
 Made with these fine projects:
 
@@ -8,5 +8,5 @@ Made with these fine projects:
 ![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![ExpressJS](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 
-[Under Construction] Please do not use this in production. There is no gaurantee this will connect to Twitch Chat.  
+[Under Construction] Please do not use this in production. There is no gaurantee this will connect to Twitch Chat.
 It will need significant work in order to be used with Twitch and or connect to it's services.

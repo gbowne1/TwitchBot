@@ -6,7 +6,8 @@ function CommandUsage() {
     return (
         <div>
             <h1>{commandName} Command Usage</h1>
-            <p>Here is the usage information for the {commandName} command.</p>
+			<p>Here is the usage information for the {commandName} command.</p>
+			<p>Click on the Learn More button to see more about the {commandName} command.</p>
         </div>
     );
 }

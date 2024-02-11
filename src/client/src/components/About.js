@@ -8,9 +8,7 @@ import "./About.css";
 
 function About() {
 	return (
-		<Button>
-			Add me!
-		</Button>
+		<h1>This is a Twitch chat bot</h1>
   );
   }
 
