@@ -12,7 +12,9 @@ import CommandListPage from "./pages/CommandListPage";
 import CommandUsagePage from "./pages/CommandUsagePage";
 import SettingsPage from "./pages/SettingsPage";
 import AboutPage from "./pages/AboutPage";
+import HelpPage from "./pages/HelpPage";
 import "./App.css";
+import LeaderBoard from "./pages/LeaderBoardPage.js";
 
 function App() {
   return (
@@ -24,7 +26,9 @@ function App() {
           <Route path="/commands" element={<CommandListPage />} />
           <Route path="/commands/:commandName" element={<CommandUsagePage />} />
           <Route path="/settings" element={<SettingsPage />} />
-          <Route path="/about" element={<AboutPage />} />
+		  <Route path="/about" element={<AboutPage />} />
+		  <Route path="/help" element={<HelpPage />} />
+		  <Route path="/leaderboard" element={<LeaderBoard />} />
         </Routes>
       </Router>
     </div>
