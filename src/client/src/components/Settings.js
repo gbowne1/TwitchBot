@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { TextField, Button, Box, Switch, FormControlLabel, Select, MenuItem, InputLabel} from '@mui/material';
+import { TextField, Button, Box, Switch, FormControlLabel, Select, MenuItem, InputLabel } from '@mui/material';
 import axios from 'axios';
 
 const Settings = () => {
@@ -68,14 +68,16 @@ const Settings = () => {
         value={settings.commandPrefix}
         onChange={handleChange}
       />
+
       <FormControlLabel
-        control={<Switch checked={settings.enableLeaderboard} onChange={handleSwitchChange} name="enableLeaderboard" />}
+        control={<Switch checked={settings.enableLeaderboard} onChange={handleCheckboxChange} name="enableLeaderboard" />}
         label="Enable Leaderboard"
       />
       <FormControlLabel
-        control={<Switch checked={settings.enableChatTracking} onChange={handleSwitchChange} name="enableChatTracking" />}
+        control={<Switch checked={settings.enableChatTracking} onChange={handleCheckboxChange} name="enableChatTracking" />}
         label="Enable Chat Tracking"
       />
+
       <InputLabel id="theme-label">Theme</InputLabel>
       <Select
         labelId="theme-label"
