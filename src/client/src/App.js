@@ -15,23 +15,29 @@ import AboutPage from "./pages/AboutPage";
 import HelpPage from "./pages/HelpPage";
 import "./App.css";
 import LeaderBoard from "./pages/LeaderBoardPage.js";
+import ThemeProvider from "./ThemeProvider";
 
 function App() {
   return (
-	<div className="App">
-      <AppBarComponent />
-      <Router>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/commands" element={<CommandListPage />} />
-          <Route path="/commands/:commandName" element={<CommandUsagePage />} />
-          <Route path="/settings" element={<SettingsPage />} />
-		  <Route path="/about" element={<AboutPage />} />
-		  <Route path="/help" element={<HelpPage />} />
-		  <Route path="/leaderboard" element={<LeaderBoard />} />
-        </Routes>
-      </Router>
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <AppBarComponent />
+        <Router>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/commands" element={<CommandListPage />} />
+            <Route
+              path="/commands/:commandName"
+              element={<CommandUsagePage />}
+            />
+            <Route path="/settings" element={<SettingsPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/help" element={<HelpPage />} />
+            <Route path="/leaderboard" element={<LeaderBoard />} />
+          </Routes>
+        </Router>
+      </div>
+    </ThemeProvider>
   );
 }
 
