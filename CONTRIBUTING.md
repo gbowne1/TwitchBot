@@ -1,6 +1,6 @@
-# Contributing to [Project Name]
+# Contributing to TwitchBot
 
-Thank you for your interest in contributing to [Project Name]! We appreciate your time and effort, and we're excited to have you as part of our community. This document outlines how you can contribute to the project and adhere to our community guidelines.
+Thank you for your interest in contributing to TwitchBot! We appreciate your time and effort, and we're excited to have you as part of our community. This document outlines how you can contribute to the project and adhere to our community guidelines.
 
 ## Table of Contents
 
@@ -81,4 +81,4 @@ We expect all contributors to:
 - [Pull request template](.github/PULL_REQUEST_TEMPLATE.md)
 - [Code of Conduct](CODE_OF_CONDUCT.md)
 
-Thank you for contributing to [Project Name]!
+Thank you for contributing to TwitchBot!
