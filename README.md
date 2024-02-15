@@ -7,14 +7,14 @@ This is a Twitch ChatBot that has a React and MUI/MaterialUI frontend, and NodeJ
 - Various Twitch commands (some of which remain in development)
     - 8ball, accountage, ban, commands, discord, donate, famousCommand, follwage, lurk, poll, project, quote, request, schedule, social, song, timeout, uptime, and weather
 
-## Setup
+## Installation and Setup
 1. Fork and clone the repository locally
 2. Navigate to source folder of the repository
 3. Install dependencies
 ```bash
 npm install
 ```
-4. Create a Twitch bot: https://dev.twitch.tv/docs/irc/get-started/
+4. [Create a Twitch bot](https://dev.twitch.tv/docs/irc/get-started/)
 5. Create a .env file in the project root and add your Twitch bot credentials:
 ```bash
 TWITCH_USERNAME=your_bot_username
@@ -29,19 +29,19 @@ npm start
 ```
 The bot will then connect to the Twitch channel chat and listen for commands and respond.
 
-## Currently Available Commands
+## Available Commands
 The bot will support the following commands:
-!accountage: Shows how old the user's Twitch account is.
-!ban <username>: Bans a user from the channel (moderator/broadcaster only).
-!commands: Displays a list of available commands.
-!discord: Provides a link to the designated Discord server.
-!followage: Shows how long the user has been following the channel.
-!project <project_name>: Sets or updates the current project being worked on.
-!timeout <username> <duration>: Times out a user for a specified duration (moderator/broadcaster permission only).
-!uptime: Displays the channel's uptime.
+- !accountage: Shows how old the user's Twitch account is.
+- !ban <username>: Bans a user from the channel (moderator/broadcaster only).
+- !commands: Displays a list of available commands.
+- !discord: Provides a link to the designated Discord server.
+- !followage: Shows how long the user has been following the channel.
+- !project <project_name>: Sets or updates the current project being worked on.
+- !timeout <username> <duration>: Times out a user for a specified duration (moderator/broadcaster permission only).
+- !uptime: Displays the channel's uptime.
 
 ## Contributing
-If you wish to contribute to this project, head over to [Contributing.md] (https://github.com/gbowne1/TwitchBot/blob/main/CONTRIBUTING.md)
+If you wish to contribute to this project, head over to [Contributing.md](https://github.com/gbowne1/TwitchBot/blob/main/CONTRIBUTING.md) for more information.
 
 ## Warning
 [Under Construction] Please do not use this in production. There is no guarantee this will connect to Twitch Chat.
