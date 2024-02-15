@@ -1,6 +1,13 @@
-# newtwitchbot
+# TwitchBot
 
-This is a Twitch Chat bot that has a React and MUI/MaterialUI frontend and NodeJS backend with MongoDB database
+This is a Twitch ChatBot that has a React and MUI/MaterialUI frontend, and NodeJS backend, with a MongoDB database.
+
+## Features
+
+- React and Material UI Frontend
+- Points and Command Leaderboard
+- Typical Twitch commands
+
 
 Made with these fine projects:
 
@@ -8,11 +15,7 @@ Made with these fine projects:
 ![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![ExpressJS](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 
-[Under Construction] Please do not use this in production. There is no gaurantee this will connect to Twitch Chat.
+## Warning
+[Under Construction] Please do not use this in production. There is no guarantee this will connect to Twitch Chat.
 It will need significant work in order to be used with Twitch and or connect to it's services.
 
-## Features
-
-- React and Material UI Frontend
-- Points and Command Leaderboard
-- Typical Twitch commands
