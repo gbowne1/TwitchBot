@@ -2,12 +2,12 @@
 This is a Twitch ChatBot that has a React and MUI/MaterialUI frontend, and NodeJS backend, with a MongoDB database. Once a Twitch ChatBot is established, this application gives numerous features and commands available to the streamer and their viewers. Through this TwitchBot, interaction between a streamer and their chat, along with people within chat is enhanced, being able to provide information on the stream along with numerous activities. 
 
 ## Table of Contents
-- [Features](https://github.com/gbowne1/TwitchBot/blob/main/README.md#Features
-- [Installation and Setup](https://github.com/gbowne1/TwitchBot/blob/main/README.md#Installation-and-Setup
-- [Usage](https://github.com/gbowne1/TwitchBot/blob/main/README.md#Usage
-- [Available Commands](https://github.com/gbowne1/TwitchBot/blob/main/README.md#Available-Commands
-- [Contributing](https://github.com/gbowne1/TwitchBot/blob/main/README.md#Contributing
-- [Warning](https://github.com/gbowne1/TwitchBot/blob/main/README.md#Warning
+- [Features](https://github.com/gbowne1/TwitchBot/blob/main/README.md#Features)
+- [Installation and Setup](https://github.com/gbowne1/TwitchBot/blob/main/README.md#Installation-and-Setup)
+- [Usage](https://github.com/gbowne1/TwitchBot/blob/main/README.md#Usage)
+- [Available Commands](https://github.com/gbowne1/TwitchBot/blob/main/README.md#Available-Commands)
+- [Contributing](https://github.com/gbowne1/TwitchBot/blob/main/README.md#Contributing)
+- [Warning](https://github.com/gbowne1/TwitchBot/blob/main/README.md#Warning)
 
 ## Features
 - React and Material UI Frontend
