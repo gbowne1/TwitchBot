@@ -7,6 +7,7 @@ This is a Twitch ChatBot that has a React and MUI/MaterialUI frontend, and NodeJ
 - [Usage](https://github.com/gbowne1/TwitchBot/blob/main/README.md#Usage)
 - [Available Commands](https://github.com/gbowne1/TwitchBot/blob/main/README.md#Available-Commands)
 - [Contributing](https://github.com/gbowne1/TwitchBot/blob/main/README.md#Contributing)
+- [Licensing](https://github.com/gbowne1/TwitchBot/blob/main/README.md#Licensing)
 - [Warning](https://github.com/gbowne1/TwitchBot/blob/main/README.md#Warning)
 
 ## Features
@@ -50,6 +51,9 @@ The bot will support the following commands:
 
 ## Contributing
 If you wish to contribute to this project, head over to [Contributing.md](https://github.com/gbowne1/TwitchBot/blob/main/CONTRIBUTING.md) for more information.
+
+## Licensing
+For more information on the licensing of this project, refer to [LICENSING](https://github.com/gbowne1/TwitchBot/blob/main/LICENSE)
 
 ## Warning
 [Under Construction] Please do not use this in production. There is no guarantee this will connect to Twitch Chat.
