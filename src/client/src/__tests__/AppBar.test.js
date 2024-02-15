@@ -1,10 +1,8 @@
-import React from "react";
 import "@testing-library/jest-dom";
+import React from "react";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import ThemeProvider, { ColorModeContext } from "../ThemeProvider";
 import AppBarComponent from "../components/AppBar";
-import userEvent from "@testing-library/user-event";
-import { act } from "react-dom/test-utils";
 
 // Mock the ColorModeContext value
 const mockColorModeContext = {
