@@ -17,7 +17,16 @@ const CommandList = () => {
 	'!so',
 	'!playing',
 	'!giveaway',
-	`!merch`
+	`!merch`,
+	`!poll`,
+	`!weather`,
+	`!uptime`,
+	`!discord`,
+	`!specs`,
+	`!8ball`,
+	`!schedule`,
+	`!socials`,
+	`!project`
   ];
 
   return (

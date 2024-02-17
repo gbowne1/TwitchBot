@@ -55,19 +55,22 @@ We welcome suggestions for new features and improvements. To propose an enhancem
 When submitting a pull request, please follow these guidelines:
 
 1. Ensure that your changes are based on the latest version of the main branch.
-2. Describe the changes you've made in detail, and reference any related issues.
+2. Describe the changes you've made in detail, and reference any related issues and include screen shots or a short clip of working changes.
 3. Make sure your code follows our [code guidelines](#code-guidelines).
-4. Add tests for any new functionality or bug fixes.
+4. Add tests for any new functionality or bug fixes using `jest` or `testing-library/react` and `testing-library/jest-dom`
 5. Ensure that all tests pass before submitting your pull request.
 6. Do NOT screen shot your code.  Copy and paste the code if you need to show code.
 
 ## Code Guidelines
 
 - Follow the coding style and conventions used throughout the project.
-- Keep your code clean, modular, and well-documented.
+- Keep your code clean, modular and well-documented.
 - Write meaningful commit messages that describe the changes you've made.
 - Keep your changes focused and avoid mixing unrelated changes in a single pull request.
 - It is best to keep your changes limited to 250 lines of code.
+- Keep the changes relevant to the issue, bug or feature you are working on.  If you need to add or fix something different open a issue or
+  feature if there is not one.
+- Ensure that the code is formatted properly
 
 ## Community Expectations
 
