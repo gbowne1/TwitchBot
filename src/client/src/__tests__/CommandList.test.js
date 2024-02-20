@@ -1,23 +1,7 @@
 import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import CommandList from "../components/CommandList";
-
-const commands = [
-  "!accountage",
-  "!ban",
-  "!commands",
-  "!famous",
-  "!followage",
-  "!lurk",
-  "!project",
-  "!today",
-  "!shoutout",
-  "!so",
-  "!playing",
-  "!giveaway",
-  `!merch`,
-];
+import CommandList, { commands } from "../components/CommandList";
 
 describe("CommandList component", () => {
   test("CommandList component must render container div", () => {

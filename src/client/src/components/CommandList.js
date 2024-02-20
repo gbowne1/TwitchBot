@@ -2,23 +2,32 @@ import React from "react";
 import { Card, CardContent, Typography, Button } from "@mui/material";
 import { InfoOutlined } from "@mui/icons-material";
 
-const CommandList = () => {
-  const commands = [
-    "!accountage",
-    "!ban",
-    "!commands",
-    "!famous",
-    "!followage",
-    "!lurk",
-    "!project",
-    "!today",
-    "!shoutout",
-    "!so",
-    "!playing",
-    "!giveaway",
-    `!merch`,
-  ];
+export const commands = [
+  "!accountage",
+  "!ban",
+  "!commands",
+  "!famous",
+  "!followage",
+  "!lurk",
+  "!project",
+  "!today",
+  "!shoutout",
+  "!so",
+  "!playing",
+  "!giveaway",
+  `!merch`,
+  `!poll`,
+  `!weather`,
+  `!uptime`,
+  `!discord`,
+  `!specs`,
+  `!8ball`,
+  `!schedule`,
+  `!socials`,
+  `!project`,
+];
 
+const CommandList = () => {
   return (
     <div
       data-testid="commandList-con"
