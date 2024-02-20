@@ -1,10 +1,13 @@
 import React, { useContext, useState } from "react";
-import { Paper, Typography, Button, Alert} from "@mui/material";
+import { Paper, Typography, Button, Alert } from "@mui/material";
 import "./HomePage.css";
 import { AuthContext } from "../context/authContext";
-import axios from 'axios';
+import axios from "axios";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 const Home = () => {
+  const [visibility, setVisibility] = useState(false);
   const [err, setErr] = useState(null);
   const [inputs, setInputs] = useState({
     username: "",
@@ -28,15 +31,14 @@ const Home = () => {
       await login(inputs);
       setErr(null); // Clear any existing error message
     } catch (err) {
-		if (err.response) {
-			setErr(err.response.data.error);
-		} else if (err.request) {
-			setErr('No response received from the server');
-		} else {
-
-			setErr('An error occurred while processing your request.');
-		}
-		console.error(err);  // Set error message
+      if (err.response) {
+        setErr(err.response.data.error);
+      } else if (err.request) {
+        setErr("No response received from the server");
+      } else {
+        setErr("An error occurred while processing your request.");
+      }
+      console.error(err); // Set error message
     } finally {
       setLoading(false); // Set loading to false when request is complete
     }
@@ -72,8 +74,8 @@ const Home = () => {
           gap: "20px",
         }}
       >
-			  <Typography variant="h4">TwitchBot</Typography>
-			  {err && <Alert severity="error">{err}</Alert>}
+        <Typography variant="h4">TwitchBot</Typography>
+        {err && <Alert severity="error">{err}</Alert>}
         {currentUser ? (
           <Button type="submit" variant="contained" onClick={handleLogout}>
             Logout
@@ -86,14 +88,27 @@ const Home = () => {
               placeholder="username"
               onChange={handleChange}
             />
-            <input
-              type="password"
-              name="password"
-              placeholder="password"
-              onChange={handleChange}
-            />
+            <div className="password">
+              <input
+                type={visibility ? "text" : "password"}
+                name="password"
+                placeholder="password"
+                onChange={handleChange}
+              />
+              <div onClick={() => setVisibility(!visibility)}>
+                {visibility ? (
+                  <VisibilityOffIcon
+                    style={{ color: "black", fontSize: "20px" }}
+                  />
+                ) : (
+                  <VisibilityIcon
+                    style={{ color: "black", fontSize: "20px" }}
+                  />
+                )}
+              </div>
+            </div>
             <Button type="submit" variant="contained" disabled={loading}>
-			  {loading ? 'Loading...' : 'Login'}
+              {loading ? "Loading..." : "Login"}
             </Button>
           </form>
         )}
