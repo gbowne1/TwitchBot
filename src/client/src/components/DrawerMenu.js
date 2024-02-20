@@ -12,8 +12,11 @@ const DrawerMenu = (props) => {
         <Drawer anchor='left' open={props.isOpen} onClose={props.onClose}>
             <List>
                 {navRoutes.map((route, index) => (
-                    <ListItem key={index}>
-                        <Link to={route.path}>
+                    <ListItem
+                        key={index}
+                        sx={{ color: 'palette.text.primary' }}
+                    >
+                        <Link to={route.path} style={{ color: 'inherit' }}>
                             <ListItemText primary={route.label} />
                         </Link>
                     </ListItem>
@@ -24,3 +27,4 @@ const DrawerMenu = (props) => {
 };
 
 export default DrawerMenu;
+

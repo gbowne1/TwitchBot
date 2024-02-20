@@ -21,6 +21,7 @@
     "@emotion/styled": "^11.10.8",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.3",
+    "@tanstack/react-query": "^5.22.2",
     "axios": "^1.4.0",
     "chai": "^4.3.7",
     "chalk": "^5.2.0",

@@ -1,0 +1,13 @@
+.auth {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  input {
+    padding: 15px;
+    width: 300px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 7px;
+  }
+}

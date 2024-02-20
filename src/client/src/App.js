@@ -4,17 +4,22 @@ import AppBarComponent from "./components/AppBar";
 import AppRoutes from "./routes";
 import "./App.css";
 import ThemeProvider from "./ThemeProvider";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <ThemeProvider>
-      <Router>
-        <div className="App">
-          <AppBarComponent />
-          <AppRoutes />
-        </div>
-      </Router>
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider>
+        <Router>
+          <div className="App">
+            <AppBarComponent />
+            <AppRoutes />
+          </div>
+        </Router>
+      </ThemeProvider>
+    </QueryClientProvider>
   );
 }
 

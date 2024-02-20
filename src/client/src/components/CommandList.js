@@ -28,6 +28,7 @@ export const commands = [
 ];
 
 const CommandList = () => {
+
   return (
     <div
       data-testid="commandList-con"

@@ -2,6 +2,15 @@
 
 This is a Twitch ChatBot that has a React and MUI/MaterialUI frontend, and NodeJS backend, with a MongoDB database. Once a Twitch ChatBot is established, this application gives numerous features and commands available to the streamer and their viewers. Through this TwitchBot, interaction between a streamer and their chat, along with people within chat is enhanced, being able to provide information on the stream along with numerous activities
 
+This bot uses these technologies in the stack
+
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=MongoDB&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Material-UI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
+![tmi.js](https://img.shields.io/badge/tmi.js-1.8.5-blue?style=for-the-badge)
+
 ## Table of Contents
 
 - [Features](https://github.com/gbowne1/TwitchBot/blob/main/README.md#Features)
