@@ -1,43 +1,60 @@
-import React from 'react';
-import { Card, CardContent, Typography, Button } from '@mui/material';
-import { InfoOutlined } from '@mui/icons-material';
+import React from "react";
+import { Card, CardContent, Typography, Button } from "@mui/material";
+import { InfoOutlined } from "@mui/icons-material";
 
+export const commands = [
+  "!accountage",
+  "!ban",
+  "!commands",
+  "!famous",
+  "!followage",
+  "!lurk",
+  "!project",
+  "!today",
+  "!shoutout",
+  "!so",
+  "!playing",
+  "!giveaway",
+  `!merch`,
+  `!poll`,
+  `!weather`,
+  `!uptime`,
+  `!discord`,
+  `!specs`,
+  `!8ball`,
+  `!schedule`,
+  `!socials`,
+  `!project`,
+];
 
 const CommandList = () => {
-  const commands = [
-    '!accountage',
-    '!ban',
-    '!commands',
-    '!famous',
-    '!followage',
-    '!lurk',
-	'!project',
-	'!today',
-    '!shoutout',
-	'!so',
-	'!playing',
-	'!giveaway',
-	`!merch`,
-	`!poll`,
-	`!weather`,
-	`!uptime`,
-	`!discord`,
-	`!specs`,
-	`!8ball`,
-	`!schedule`,
-	`!socials`,
-	`!project`
-  ];
 
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-end', gap: '5px', marginTop: '10px' }}>
+    <div
+      data-testid="commandList-con"
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "flex-end",
+        gap: "5px",
+        marginTop: "10px",
+      }}
+    >
       {commands.map((command, index) => (
-        <Card key={index} style={{ marginBottom: '5px', width: 'calc(20% - 5px)' }}>
+        <Card
+          data-testid="commandList-card"
+          key={index}
+          style={{ marginBottom: "5px", width: "calc(20% - 5px)" }}
+        >
           <CardContent>
-            <Typography variant="h5" component="div">
+            <Typography
+              data-testid="commandList-card-h5"
+              variant="h5"
+              component="div"
+            >
               {command}
             </Typography>
-            <Typography variant="body2">
+            <Typography data-testid="commandList-card-body2" variant="body2">
               Use this command to interact with the Twitch bot.
             </Typography>
             <Button variant="contained" startIcon={<InfoOutlined />}>
