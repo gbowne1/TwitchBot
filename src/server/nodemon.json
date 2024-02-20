@@ -1,8 +1,8 @@
 {
-	"env": {
-		"PORT": 3000,
-		"MONGODB_URI": "mongodb://localhost:27017/twitchbot",
-		"TWITCH_BOT_HOST": "irc-ws.chat.twitch.tv",
-		"TWITCH_BOT_PORT": 443
-	}
+  "env": {
+    "PORT": 3000,
+    "MONGODB_URI": "mongodb://localhost:27017/twitchbot",
+    "TWITCH_BOT_HOST": "irc-ws.chat.twitch.tv",
+    "TWITCH_BOT_PORT": 443
+  }
 }
