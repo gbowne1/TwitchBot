@@ -107,12 +107,14 @@ app.post("/login", async (req, res) => {
   }
 
   // Generate JWT token
-  const token = jwt.sign({ username: user._id }, process.env.SECRET_KEY);
+  const token = jwt.sign({ username: user._id }, process.env.SECRET_KEY, { expiresIn: '1h' });
   const userInfo = { ...user.toObject(), password: undefined };
   res
     .cookie("accessToken", token, { httpOnly: true })
     .status(200)
     .json(userInfo);
+
+  res.status(200).json({ token, user: { ...user.toObject(), password: undefined } });
 });
 
 app.post("/logout", (req, res) => {
@@ -125,7 +127,7 @@ app.post("/logout", (req, res) => {
     .json({ message: "Logout successful" });
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
   console.log("server running ");
