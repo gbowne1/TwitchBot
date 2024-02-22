@@ -4,15 +4,12 @@ import "./About.css";
 
 function About() {
   return (
-    <Container sx={{ flexGrow:  1, p:  4 }}>
-      <Paper>
-        <Typography>
-          About Twitch Bot
-        </Typography>
-        <Typography>
+    <Container data-testid="about-container" sx={{ flexGrow: 1, p: 4 }}>
+      <Paper data-testid="about-paper">
+        <Typography data-testid="about-typo-title">About Twitch Bot</Typography>
+        <Typography data-testid="about-typo-text">
           This is a Twitch chat bot created using tmi.js and the Twitch API.
         </Typography>
-        {/* Add more content here */}
       </Paper>
     </Container>
   );
