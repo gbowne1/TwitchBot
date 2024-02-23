@@ -115,10 +115,6 @@ app.post("/login", async (req, res) => {
     .cookie("accessToken", token, { httpOnly: true })
     .status(200)
     .json(userInfo);
-
-  res
-    .status(200)
-    .json({ token, user: { ...user.toObject(), password: undefined } });
 });
 
 app.post("/logout", (req, res) => {
