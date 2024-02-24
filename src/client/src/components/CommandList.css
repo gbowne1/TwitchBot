@@ -6,12 +6,4 @@
   width: clamp(200px, 90%, 1000px);
   gap: var(--_gap);
   margin: calc(var(--_gap) * 2) auto;
-  text-align: left;
-
-  .command-card .card-action-row {
-    display: flex;
-    justify-content: flex-start;
-    gap: var(--_gap);
-    margin-block-start: calc(var(--_gap) * 2);
-  }
 }
