@@ -1,0 +1,10 @@
+.command-card {
+  text-align: left;
+
+  .card-action-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: var(--_gap);
+    margin-block-start: calc(var(--_gap) * 2);
+  }
+}

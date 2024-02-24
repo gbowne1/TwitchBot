@@ -1,0 +1,9 @@
+.command-list {
+  --_gap: 10px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  width: clamp(200px, 90%, 1000px);
+  gap: var(--_gap);
+  margin: calc(var(--_gap) * 2) auto;
+}
