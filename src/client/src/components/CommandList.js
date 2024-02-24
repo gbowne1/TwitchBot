@@ -1,6 +1,7 @@
 import React from "react";
-import { Card, CardContent, Typography, Button } from "@mui/material";
+import { Box, Card, CardContent, Typography, Button } from "@mui/material";
 import { InfoOutlined } from "@mui/icons-material";
+import "./CommandList.css";
 
 export const commands = [
   "!accountage",
@@ -15,36 +16,26 @@ export const commands = [
   "!so",
   "!playing",
   "!giveaway",
-  `!merch`,
-  `!poll`,
-  `!weather`,
-  `!uptime`,
-  `!discord`,
-  `!specs`,
-  `!8ball`,
-  `!schedule`,
-  `!socials`,
-  `!project`,
+  "!merch",
+  "!poll",
+  "!weather",
+  "!uptime",
+  "!discord",
+  "!specs",
+  "!8ball",
+  "!schedule",
+  "!socials",
+  "!project",
 ];
 
 const CommandList = () => {
-
   return (
-    <div
-      data-testid="commandList-con"
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "flex-end",
-        gap: "5px",
-        marginTop: "10px",
-      }}
-    >
+    <div className="command-list" data-testid="commandList-con">
       {commands.map((command, index) => (
         <Card
           data-testid="commandList-card"
           key={index}
-          style={{ marginBottom: "5px", width: "calc(20% - 5px)" }}
+          className="command-card"
         >
           <CardContent>
             <Typography
@@ -57,9 +48,14 @@ const CommandList = () => {
             <Typography data-testid="commandList-card-body2" variant="body2">
               Use this command to interact with the Twitch bot.
             </Typography>
-            <Button variant="contained" startIcon={<InfoOutlined />}>
-              Learn More
-            </Button>
+            <Box className="card-action-row">
+              <Button variant="contained" startIcon={<InfoOutlined />}>
+                Info
+              </Button>
+              <Button variant="contained" startIcon={<InfoOutlined />}>
+                Execute
+              </Button>
+            </Box>
           </CardContent>
         </Card>
       ))}

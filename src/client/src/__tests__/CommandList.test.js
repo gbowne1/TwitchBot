@@ -38,7 +38,7 @@ describe("CommandList component", () => {
   test("CommandList component must render Button to the number of elements in commands length", () => {
     render(<CommandList />);
     const ButtonElements = screen.getAllByRole("button");
-    expect(ButtonElements.length).toBe(commands.length);
-    expect(ButtonElements[0]).toHaveTextContent("Learn More");
+    expect(ButtonElements.length).toBe(commands.length * 2);
+    expect(ButtonElements[0]).toHaveTextContent("Info");
   });
 });
