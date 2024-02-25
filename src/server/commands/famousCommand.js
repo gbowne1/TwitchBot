@@ -1,8 +1,10 @@
 // commands/famousCommand.js
 
-module.exports = async function famousCommand(twitchClient, channel) {
+module.exports = async function famousCommand(twitchClient) {
   twitchClient.on("message", (channel, tags, message, self) => {
-    if (self) return; // Ignore messages from the bot
+    if (self) {
+      return;
+    } // Ignore messages from the bot
 
     if (message.match(/famous/)) {
       twitchClient.ban(channel, tags["username"]);

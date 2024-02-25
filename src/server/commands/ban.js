@@ -15,7 +15,7 @@ module.exports = async function ban(
   twitchClient
     .ban(channel, username, "Banned by bot command")
     .then(() => {
-      twitchClient.say(channel, `\${username} has been banned.`);
+      twitchClient.say(channel, "${username} has been banned.");
     })
     .catch((error) => {
       console.error("Error banning user:", error.message);

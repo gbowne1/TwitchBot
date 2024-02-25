@@ -6,6 +6,6 @@ module.exports = async function accountage(twitchClient, channel, userstate) {
   const username = userstate.username;
   twitchClient.say(
     channel,
-    `\${username}'s account was created on \${accountCreationDate}.`
+    `${username}'s account was created on ${accountCreationDate}.`
   );
 };

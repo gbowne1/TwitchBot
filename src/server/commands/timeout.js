@@ -25,7 +25,7 @@ module.exports = async function timeout(
     .then(() => {
       twitchClient.say(
         channel,
-        `\${username} has been timed out for \${duration} seconds.`
+        `${username} has been timed out for ${duration} seconds.`
       );
     })
     .catch((error) => {
