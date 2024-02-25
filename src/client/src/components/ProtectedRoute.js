@@ -1,9 +1,9 @@
-import { Route, Navigate } from "react-router-dom";
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { AuthContext } from "../context/authContext";
+import PropTypes from "prop-types";
 
-function ProtectedRoute({ chilldren }) {
+function ProtectedRoute({ children }) {
   const { currentUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -13,7 +13,11 @@ function ProtectedRoute({ chilldren }) {
     }
   }, [currentUser, navigate]);
 
-  return chilldren;
+  return children;
 }
+
+ProtectedRoute.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default ProtectedRoute;

@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Card, CardContent, Typography, Button } from "@mui/material";
 import { InfoOutlined } from "@mui/icons-material";
 import "./CommandCard.css";
+import PropTypes from "prop-types";
 
 const CommandCard = ({
   command,
@@ -40,6 +41,11 @@ const CommandCard = ({
   );
 };
 
+CommandCard.propTypes = {
+  command: PropTypes.string.isRequired,
+  children: PropTypes.node,
+  onExecute: PropTypes.func,
+  onLearnMore: PropTypes.func,
+};
+
 export default CommandCard;
-
-

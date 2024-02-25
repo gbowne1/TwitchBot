@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import React from "react";
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import ThemeProvider, { ColorModeContext } from "../ThemeProvider";
 import AppBarComponent from "../components/AppBar";
 
@@ -10,7 +10,6 @@ const mockColorModeContext = {
     toggleColorMode: jest.fn(),
   },
 };
-const handleDrawerChange = jest.fn();
 
 test("AppBarComponent toggles drawer menu and dark mode", async () => {
   // Render the component with mocked context providers

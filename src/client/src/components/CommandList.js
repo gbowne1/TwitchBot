@@ -34,9 +34,3 @@ const CommandList = () => {
 };
 
 export default CommandList;
-
-
-
-
-
-
