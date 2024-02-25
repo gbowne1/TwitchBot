@@ -1,0 +1,42 @@
+name: Code Quality Checks
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18"
+
+      - name: Install dependencies for client
+        run: cd src/client && npm install
+
+      - name: Install dependencies for server
+        run: cd src/server && npm install
+
+      # Run Prettier
+      - name: Run Prettier for client
+        run: cd src/client && npx prettier --check .
+
+      - name: Run Prettier for server
+        run: cd src/server && npx prettier --check .
+
+      # Run ESLint
+      - name: Run ESLint for client
+        run: cd src/client && npx eslint .
+
+      - name: Run ESLint for server
+        run: cd src/server && npx eslint .
+
+      # Run tests (assuming you have scripts defined in your package.json)
+      - name: Run tests for client
+        run: cd src/client && npm test
+
+      - name: Run tests for server
+        run: cd src/server && npm test
