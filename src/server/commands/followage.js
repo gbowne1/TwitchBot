@@ -6,6 +6,6 @@ module.exports = async function followage(twitchClient, channel, userstate) {
   const username = userstate.username;
   twitchClient.say(
     channel,
-    `\${username} has been following \${channel} for \${followage}.`
+    `${username} has been following ${channel} for ${followage}.`
   );
 };
