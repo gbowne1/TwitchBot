@@ -4,7 +4,7 @@ import { render, screen } from "@testing-library/react";
 import About from "../components/About";
 
 describe("About component", () => {
-  test("About component render container", () => {
+  test("About container element is present in the document", () => {
     render(<About />);
     const conElement = screen.getByTestId("about-container");
     expect(conElement).toBeInTheDocument();
