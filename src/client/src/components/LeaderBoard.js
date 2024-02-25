@@ -1,8 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, IconButton } from '@mui/material';
-import { Edit as EditIcon } from '@mui/icons-material';
+import React, { useState, useEffect } from "react";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+  IconButton,
+} from "@mui/material";
+import { Edit as EditIcon } from "@mui/icons-material";
 
 const LeaderBoard = () => {
+  // eslint-disable-next-line no-unused-vars -- until functionality is implemented
   const [leaderboardData, setLeaderboardData] = useState([]);
 
   useEffect(() => {
@@ -10,6 +20,7 @@ const LeaderBoard = () => {
     // Example: axios.get('/api/leaderboard').then((response) => setLeaderboardData(response.data));
   }, []);
 
+  // eslint-disable-next-line no-unused-vars -- until functionality is implemented
   const handleEditClick = (userId) => {
     // Handle edit action, e.g., open a dialog with user details
   };
@@ -28,7 +39,9 @@ const LeaderBoard = () => {
         <TableBody>
           {leaderboardData.map((row) => (
             <TableRow key={row.id}>
-              <TableCell component="th" scope="row">{row.user}</TableCell>
+              <TableCell component="th" scope="row">
+                {row.user}
+              </TableCell>
               <TableCell align="right">{row.commandsUsed}</TableCell>
               <TableCell align="right">{row.messagesSent}</TableCell>
               <TableCell align="right">

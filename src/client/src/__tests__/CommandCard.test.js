@@ -38,6 +38,3 @@ describe("CommandCard", () => {
     expect(onExecuteMock).toHaveBeenCalledTimes(1);
   });
 });
-
-
-

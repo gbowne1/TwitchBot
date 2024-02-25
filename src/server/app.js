@@ -1,6 +1,3 @@
-const _ = require("lodash");
-const uuid = require("uuid");
-const socketIO = require("socket.io");
 const dotenv = require("dotenv");
 const tmi = require("tmi.js");
 
@@ -33,11 +30,11 @@ const twitchClient = new tmi.Client({
 twitchClient.connect();
 
 twitchClient.on("message", async (channel, userstate, message, self) => {
-  if (self) return;
+  if (self) {
+    return;
+  }
 
-  const [raw, command, argument] = message.match(
-    /^!([a-zA-Z0-9]+)(?:\W+)?(.*)?/
-  );
+  const [, command, argument] = message.match(/^!([a-zA-Z0-9]+)(?:\W+)?(.*)?/);
 
   switch (command) {
     case "uptime":
@@ -54,6 +51,9 @@ twitchClient.on("message", async (channel, userstate, message, self) => {
       break;
     case "accountage":
       await accountageCommand(twitchClient, channel, userstate);
+      break;
+    case "lurk":
+      await lurkCommand(twitchClient, channel, userstate);
       break;
     case "ban":
       await banCommand(twitchClient, channel, userstate, argument);

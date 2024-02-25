@@ -18,4 +18,3 @@ describe("CommandList component", () => {
     expect(cardElements.length).toBe(allCommands.length);
   });
 });
-

@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { Paper, Typography, Button, Alert } from "@mui/material";
-import "./HomePage.css";
 import { AuthContext } from "../context/authContext";
-import axios from "axios";
-import VisibilityIcon from "@mui/icons-material/Visibility";
-import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
-
+import {
+  Visibility as VisibilityIcon,
+  VisibilityOff as VisibilityOffIcon,
+} from "@mui/icons-material";
+import "./HomePage.css";
 const Home = () => {
   const [visibility, setVisibility] = useState(false);
   const [err, setErr] = useState(null);

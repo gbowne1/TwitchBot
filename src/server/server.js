@@ -1,28 +1,9 @@
 const express = require("express");
-const axios = require("axios");
-const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
-const cookieSession = require("cookie-session");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const helmet = require("helmet");
-const fs = require("fs");
 const jwt = require("jsonwebtoken");
-const _ = require("lodash");
-const moment = require("moment");
-const mongodb = require("mongodb");
 const mongoose = require("mongoose");
-const morgan = require("morgan");
-const multer = require("multer");
-const passport = require("passport");
-const session = require("express-session");
-const prettier = require("prettier");
-const request = require("request");
-const socketIO = require("socket.io");
-const tmi = require("tmi.js");
-const uuid = require("uuid");
-const winston = require("winston");
-const WebSocket = require("ws");
 const bcrypt = require("bcrypt");
 
 dotenv.config();
@@ -50,7 +31,7 @@ app.get(["/commands", "/commandlist"], (req, res) => {
 
 app.get("/commands/:commandName", (req, res) => {
   const commandName = req.params.commandName;
-  res.send(`Here is the usage for \${commandName} command!`);
+  res.send(`Here is the usage for ${commandName} command!`);
 });
 
 app.get(["/settings", "/config"], (req, res) => {

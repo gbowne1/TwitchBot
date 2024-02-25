@@ -1,47 +1,50 @@
-import React from 'react'
-import { useMediaQuery } from '@mui/material'
+import React from "react";
+import { useMediaQuery } from "@mui/material";
 import {
-    createTheme,
-    ThemeProvider as MuiThemeProvider,
-} from '@mui/material/styles'
-import CssBaseline from '@mui/material/CssBaseline'
-import { useEffect } from 'react'
+  createTheme,
+  ThemeProvider as MuiThemeProvider,
+} from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import PropTypes from "prop-types";
+import { useEffect } from "react";
 
-const ColorModeContext = React.createContext({ toggleColorMode: () => {} })
+const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
 const ThemeProvider = ({ children }) => {
-    const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
-    const [mode, setMode] = React.useState(prefersDarkMode ? 'dark' : 'light')
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+  const [mode, setMode] = React.useState(prefersDarkMode ? "dark" : "light");
 
-    useEffect(() => {
-        setMode(prefersDarkMode ? 'dark' : 'light')
-    }, [prefersDarkMode])
+  useEffect(() => {
+    setMode(prefersDarkMode ? "dark" : "light");
+  }, [prefersDarkMode]);
 
-    const colorMode = React.useMemo(
-        () => ({
-            toggleColorMode: () => {
-                setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'))
-            },
-        }),
-        []
-    )
+  const colorMode = React.useMemo(
+    () => ({
+      toggleColorMode: () => {
+        setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+      },
+    }),
+    []
+  );
 
-    const theme = createTheme({
-        palette: {
-            mode,
-        },
-    })
+  const theme = createTheme({
+    palette: {
+      mode,
+    },
+  });
 
-    return (
-        <ColorModeContext.Provider value={{ colorMode }}>
-            <MuiThemeProvider theme={theme}>
-                <CssBaseline />
-                {children}
-            </MuiThemeProvider>
-        </ColorModeContext.Provider>
-    )
-}
+  return (
+    <ColorModeContext.Provider value={{ colorMode }}>
+      <MuiThemeProvider theme={theme}>
+        <CssBaseline />
+        {children}
+      </MuiThemeProvider>
+    </ColorModeContext.Provider>
+  );
+};
 
-export default ThemeProvider
+ThemeProvider.propTypes = { children: PropTypes.node };
 
-export { ColorModeContext }
+export default ThemeProvider;
+
+export { ColorModeContext };
