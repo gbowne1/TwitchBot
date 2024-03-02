@@ -49,7 +49,7 @@ const Login = () => {
     try {
       await logout();
     } catch (err) {
-      // setErr(err.response.data);
+      setErr(err.response.data);
       console.log(err);
     }
   };
@@ -62,7 +62,7 @@ const Login = () => {
           Logout
         </Button>
       ) : (
-        <form className="auth" onSubmit={handleSubmit}>
+        <form role="form" className="auth" onSubmit={handleSubmit}>
           <input
             type="text"
             name="username"
