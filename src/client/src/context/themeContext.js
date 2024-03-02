@@ -12,16 +12,22 @@ const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
 const ThemeProvider = ({ children }) => {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
-  const [mode, setMode] = React.useState(prefersDarkMode ? "dark" : "light");
+  const [mode, setMode] = React.useState(
+    localStorage.getItem("mode") || (prefersDarkMode ? "dark" : "light")
+  );
 
   useEffect(() => {
-    setMode(prefersDarkMode ? "dark" : "light");
-  }, [prefersDarkMode]);
+    localStorage.setItem("mode", mode);
+  }, [mode]);
 
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+        setMode((prevMode) => {
+          const newMode = prevMode === "light" ? "dark" : "light";
+          localStorage.setItem("mode", newMode);
+          return newMode;
+        });
       },
     }),
     []
