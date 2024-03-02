@@ -9,7 +9,7 @@ import {
   InputLabel,
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import { ColorModeContext } from "../ThemeProvider";
+import { ColorModeContext } from "../context/themeContext";
 // import axios from 'axios'
 
 const Settings = () => {

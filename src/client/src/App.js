@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import AppBarComponent from "./components/AppBar";
 import AppRoutes from "./routes";
 import "./App.css";
-import ThemeProvider from "./ThemeProvider";
+import ThemeProvider from "./context/themeContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const queryClient = new QueryClient();

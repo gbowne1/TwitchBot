@@ -7,7 +7,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import DrawerMenu from "./DrawerMenu";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
-import { ColorModeContext } from "../ThemeProvider";
+import { ColorModeContext } from "../context/themeContext";
 import { useTheme } from "@mui/material/styles";
 
 const AppBarComponent = () => {
