@@ -12,9 +12,14 @@ app.use(express.json());
 app.use(cors({ origin: "http://localhost:3001", credentials: true }));
 app.use(cookieParser());
 
+let mongoURI =
+  process.env.NODE_ENV === "test"
+    ? process.env.MONGO_TEST_URI
+    : process.env.MONGO_URI;
+
 mongoose;
 mongoose
-  .connect(process.env.MONGO_URI, {
+  .connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true, // This replaces the useFindAndModify option
   })
@@ -110,6 +115,8 @@ app.post("/logout", (req, res) => {
 
 const PORT = process.env.PORT || 3001;
 
-app.listen(PORT, () => {
-  console.log("server running ");
+const server = app.listen(PORT, () => {
+  console.log(`server running on port ${PORT}`);
 });
+
+module.exports = server;
