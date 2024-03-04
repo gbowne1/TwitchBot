@@ -18,11 +18,20 @@ const LeaderBoard = () => {
   useEffect(() => {
     // Fetch leaderboard data from your backend
     // Example: axios.get('/api/leaderboard').then((response) => setLeaderboardData(response.data));
+    const mockData = [
+      { id: 1, user: "User1", commandsUsed: 10, messagesSent: 20 },
+      { id: 2, user: "User2", commandsUsed: 8, messagesSent: 15 },
+      { id: 3, user: "User3", commandsUsed: 12, messagesSent: 25 },
+    ];
+    setLeaderboardData(mockData);
   }, []);
 
   // eslint-disable-next-line no-unused-vars -- until functionality is implemented
   const handleEditClick = (userId) => {
     // Handle edit action, e.g., open a dialog with user details
+    // Placeholder function for handling edit action
+    console.log(`Edit user with ID ${userId}`);
+    // Implement logic to open a dialog with user details
   };
 
   return (

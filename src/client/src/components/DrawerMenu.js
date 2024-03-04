@@ -14,7 +14,10 @@ const DrawerMenu = (props) => {
       <List>
         {navRoutes.map((route, index) => (
           <ListItem key={index} sx={{ color: "palette.text.primary" }}>
-            <Link to={route.path} style={{ color: "inherit" }}>
+            <Link
+              to={route.path}
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
               <ListItemText primary={route.label} />
             </Link>
           </ListItem>
