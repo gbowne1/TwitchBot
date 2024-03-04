@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { useMediaQuery } from "@mui/material";
 import {
   createTheme,
@@ -6,13 +6,12 @@ import {
 } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import PropTypes from "prop-types";
-import { useEffect } from "react";
 
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
 
 const ThemeProvider = ({ children }) => {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
-  const [mode, setMode] = React.useState(
+  const [mode, setMode] = useState(
     localStorage.getItem("mode") || (prefersDarkMode ? "dark" : "light")
   );
 
@@ -20,7 +19,7 @@ const ThemeProvider = ({ children }) => {
     localStorage.setItem("mode", mode);
   }, [mode]);
 
-  const colorMode = React.useMemo(
+  const colorMode = useMemo(
     () => ({
       toggleColorMode: () => {
         setMode((prevMode) => {
