@@ -11,7 +11,7 @@ export const AuthContextProvider = ({ children }) => {
 
   const login = async (inputs) => {
     try {
-      const res = await axios.post("http://localhost:3000/login", inputs, {
+      const res = await axios.post("http://localhost:3001/login", inputs, {
         withCredentials: true,
       });
       setCurrentUser(res.data);
@@ -23,7 +23,7 @@ export const AuthContextProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      await axios.post("http://localhost:3000/logout");
+      await axios.post("http://localhost:3001/logout");
       setCurrentUser(null);
     } catch (error) {
       // Handle login error
