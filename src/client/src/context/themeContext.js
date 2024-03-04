@@ -1,6 +1,9 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { useMediaQuery } from "@mui/material";
-import { createTheme, ThemeProvider as MuiThemeProvider } from "@mui/material/styles";
+import {
+  createTheme,
+  ThemeProvider as MuiThemeProvider,
+} from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import PropTypes from "prop-types";
 

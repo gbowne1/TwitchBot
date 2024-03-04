@@ -29,7 +29,7 @@ export const AuthContextProvider = ({ children }) => {
       // Handle login error
       console.error("Login failed:", error);
     }
-  }
+  };
 
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(currentUser));
