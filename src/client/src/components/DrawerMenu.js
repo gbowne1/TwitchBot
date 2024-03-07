@@ -6,14 +6,18 @@ import ListItemText from "@mui/material/ListItemText";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { routes } from "../routes";
+import { useTheme } from "@mui/material/styles";
 
 const DrawerMenu = (props) => {
   const navRoutes = routes.filter((route) => route.inNav);
+
+  const theme = useTheme();
+
   return (
     <Drawer anchor="left" open={props.isOpen} onClose={props.onClose}>
       <List>
         {navRoutes.map((route, index) => (
-          <ListItem key={index} sx={{ color: "palette.text.primary" }}>
+          <ListItem key={index} sx={{ color: theme.palette.text.primary }}>
             <Link
               to={route.path}
               style={{ color: "inherit", textDecoration: "none" }}
