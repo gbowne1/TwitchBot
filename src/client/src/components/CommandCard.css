@@ -1,10 +1,22 @@
 .command-card {
   text-align: left;
 
+  .command-card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
   .card-action-row {
     display: flex;
     justify-content: flex-start;
     gap: var(--_gap);
-    margin-block-start: calc(var(--_gap) * 2);
+    margin-top: auto;
   }
+}
+/* SCSS is better choice for nested styles */
+/* Because all these css file should refactore with best practices */
+/* i just fixed this issue with data attribute selectore */
+[data-testid="commandList-card-body2"] {
+  margin-bottom: 1rem !important;
 }
