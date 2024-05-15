@@ -1,0 +1,37 @@
+.settingForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.settingForm__checkBox {
+  width: fit-content;
+}
+
+.settingForm__submitBtn {
+  /* width: 2rem!important; */
+  margin-top: 0.5rem;
+  align-self: center;
+}
+.formSetting__select {
+  width: fit-content;
+}
+.formSetting__select--label {
+  text-align: start;
+}
+
+@media only screen and (min-width: 400px) {
+  .settingForm {
+    padding: 2rem 1rem;
+    width: 70%;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .settingForm {
+    padding: 2rem 1rem;
+    width: 50%;
+    margin: auto;
+  }
+}

@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { ColorModeContext } from "../context/themeContext";
+import "./Settings.css";
 // import axios from 'axios'
 
 const Settings = () => {
@@ -20,7 +21,7 @@ const Settings = () => {
     botUsername: "",
     oauthToken: "",
     channelName: "",
-    commandPrefix: "!",
+    commandPrefix: "",
     defaultMessages: {
       newFollower: "Thanks for following!",
       newSubscriber: "Welcome to the sub team!",
@@ -55,7 +56,7 @@ const Settings = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="settingForm" onSubmit={handleSubmit}>
       <TextField
         label="Bot Username"
         name="botUsername"
@@ -91,6 +92,7 @@ const Settings = () => {
           />
         }
         label="Enable Leaderboard"
+        className="settingForm__checkBox"
       />
       <FormControlLabel
         control={
@@ -100,21 +102,33 @@ const Settings = () => {
             name="enableChatTracking"
           />
         }
+        className="settingForm__checkBox"
         label="Enable Chat Tracking"
       />
 
-      <InputLabel id="theme-label">Theme</InputLabel>
+      <InputLabel className="formSetting__select--label" id="theme-label">
+        Theme
+      </InputLabel>
       <Select
+        className="formSetting__select"
         labelId="theme-label"
         id="theme-select"
         value={theme.palette.mode}
         label="Theme"
         onChange={colorMode.toggleColorMode}
+        placeholder="dsf"
       >
         <MenuItem value="light">Light</MenuItem>
         <MenuItem value="dark">Dark</MenuItem>
       </Select>
-      <Button type="submit">Save Settings</Button>
+      <Button
+        className="settingForm__submitBtn"
+        size="large"
+        variant="contained"
+        type="submit"
+      >
+        Save Settings
+      </Button>
     </form>
   );
 };
