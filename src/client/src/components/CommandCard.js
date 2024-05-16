@@ -13,7 +13,7 @@ const CommandCard = ({
 }) => {
   return (
     <Card className="command-card" {...props}>
-      <CardContent>
+      <CardContent className="command-card-content">
         <Typography
           data-testid="commandList-card-h5"
           variant="h5"
