@@ -16,7 +16,7 @@ const DrawerMenu = (props) => {
 
   return (
     <Drawer anchor="left" open={props.isOpen} onClose={props.onClose}>
-      <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '8px' }}>
+      <div style={{ display: "flex", justifyContent: "flex-end", padding: "8px" }}>
         <IconButton onClick={props.onClose}>
           <CloseIcon />
         </IconButton>
