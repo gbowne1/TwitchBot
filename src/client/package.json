@@ -4,7 +4,7 @@
   "description": "the twitchbot client",
   "main": "index.js",
   "scripts": {
-    "start": "ESLINT_NO_DEV_ERRORS=true; react-scripts start",
+    "start": "cross-env ESLINT_NO_DEV_ERRORS=true; react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -51,6 +51,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
+    "cross-env": "^7.0.3",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jest-dom": "^5.1.0",
